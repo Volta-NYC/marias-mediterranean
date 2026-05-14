@@ -2,20 +2,46 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="border-t mt-16">
-      <div className="max-w-6xl mx-auto px-6 py-8 text-sm text-gray-500 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-col gap-1">
-          <div>© {new Date().getFullYear()} Business Name</div>
-          <Link
-            href="https://nyc.voltanpo.org"
-            target="_blank"
-            rel="noreferrer"
-            className="text-gray-600 hover:underline"
-          >
-            Website made by @VoltaNYC
-          </Link>
+    <footer className="bg-[#101714] text-[#d8dfd8]">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:px-8 md:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-10">
+        <div>
+          <div className="text-2xl font-semibold text-white">Maria&apos;s Mediterranean</div>
+          <p className="mt-4 max-w-md leading-7">
+            Fresh Greek seafood, homestyle specials, and family hospitality in
+            Bayside, Queens.
+          </p>
         </div>
-        <div>Built with Volta</div>
+        <div>
+          <h2 className="text-sm font-bold uppercase tracking-[0.22em] text-[#f7c66b]">
+            Visit
+          </h2>
+          <p className="mt-4 leading-7">
+            38-11 Bell Blvd
+            <br />
+            Bayside, NY 11361
+            <br />
+            (718) 279-1606
+          </p>
+        </div>
+        <div>
+          <h2 className="text-sm font-bold uppercase tracking-[0.22em] text-[#f7c66b]">
+            Explore
+          </h2>
+          <div className="mt-4 flex flex-col gap-2">
+            <Link href="/pages/menu" className="hover:text-white">
+              Menus
+            </Link>
+            <Link href="/pages/about" className="hover:text-white">
+              Chef Story
+            </Link>
+            <Link href="/pages/contact" className="hover:text-white">
+              Hours & Contact
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-white/10 px-6 py-5 text-center text-xs text-[#aeb8ae]">
+        (c) {new Date().getFullYear()} Maria&apos;s Mediterranean. Website made by VoltaNYC.
       </div>
     </footer>
   )

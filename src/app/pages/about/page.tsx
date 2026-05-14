@@ -1,10 +1,69 @@
 export default function AboutPage() {
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold">About</h1>
-      <p className="text-gray-600">
-        Replace this with the business story, mission, and key details.
-      </p>
+    <div className="bg-[#fffaf1] text-[#17211c]">
+      <section className="relative min-h-[64vh] overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1800&q=85"
+          alt="Chef preparing food in a restaurant kitchen"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#111d18]/70" />
+        <div className="relative mx-auto flex min-h-[64vh] max-w-7xl flex-col justify-end px-6 pb-14 pt-32 sm:px-8 lg:px-10">
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#f7c66b]">
+            About Maria
+          </p>
+          <h1 className="mt-4 max-w-4xl text-5xl font-semibold leading-tight text-white">
+            Greek tradition, shaped by family, travel, and a Bayside dining room.
+          </h1>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-10">
+        <div>
+          <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#b6402d]">
+            The Chef
+          </p>
+          <h2 className="mt-4 text-4xl font-semibold leading-tight">
+            Maria Petridis cooks from experience, not formulas.
+          </h2>
+        </div>
+        <div className="space-y-5 text-lg leading-8 text-[#4f574f]">
+          <p>
+            Maria grew up in Skoutari, a village in Serres, Greece, learning
+            Mediterranean cooking by watching her mother work with seasonal
+            ingredients, herbs, and patient technique.
+          </p>
+          <p>
+            After moving to New York, she kept refining those dishes for her
+            family, bringing a modern touch to the food she knew best. Maria
+            and Kiriakos Petridis opened the restaurant in Bayside after years
+            of testing, serving, and building the kind of place they wanted to
+            welcome people into.
+          </p>
+          <p>
+            Maria&apos;s talent later brought her to Food Network&apos;s Chopped, where
+            she won. The spirit is still the same at the restaurant: bright,
+            fresh, generous Greek cooking made for the table.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 sm:px-8 md:grid-cols-3 lg:px-10">
+          {[
+            ["Opened", "January 10, 2011 in Bayside"],
+            ["Known for", "Whole grilled fish and homestyle Greek specials"],
+            ["Care", "A wide gluten-free menu and allergy-aware service"],
+          ].map(([label, value]) => (
+            <div key={label} className="rounded-md border border-[#e8dcc4] p-6">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#b6402d]">
+                {label}
+              </p>
+              <p className="mt-4 text-2xl font-semibold leading-snug">{value}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   )
 }

@@ -1,10 +1,12 @@
+import type { Metadata } from "next"
 import "./globals.css"
 import Navbar from "@/lib/components/navbar"
 import Footer from "@/lib/components/footer"
 
-export const metadata = {
-  title: "Business Name",
-  description: "Short description of the business."
+export const metadata: Metadata = {
+  title: "Maria's Mediterranean | Bayside Greek Seafood",
+  description:
+    "Maria's Mediterranean on Bell Boulevard in Bayside serves Greek seafood, homestyle specials, gluten-free dishes, catering, lunch, and dinner.",
 }
 
 export default function RootLayout({
@@ -14,11 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen bg-[#fffaf1] antialiased">
         <Navbar />
-        <main className="flex-1 max-w-6xl mx-auto px-6 py-12">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
