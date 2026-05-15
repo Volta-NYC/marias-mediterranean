@@ -3,31 +3,31 @@ import Link from "next/link"
 const menuSections = [
   {
     title: "Dinner & Children's Menu",
+    image: "/img/menu/dinnerchildren.avif",
     description: "The full dinner menu, family plates, seafood, meats, sides, and children's options.",
-    items: ["Traditional Greek spreads", "Appetizers", "Soups & salads", "Kreata meats"],
-  },
-  {
-    title: "Seafood & Whole Fish",
-    description: "Fresh fish and seafood served with lemon potatoes, rice, fries, vegetables, or horta.",
-    items: ["Thalassina seafood", "Whole grilled fish", "Salmon fillet", "Shrimp saganaki"],
+    items: ["Greek spreads", "Whole fish", "Seafood", "Children's plates"],
   },
   {
     title: "Lunch",
+    image: "/img/menu/lunch.avif",
     description: "Monday through Saturday lunch plates from 11 am to 3 pm.",
     items: ["Platters", "Greek specialties", "Salads", "Fresh sides"],
   },
   {
     title: "Catering",
+    image: "/img/menu/catering.avif",
     description: "Off-premise catering for gatherings, office meals, holidays, and family events.",
     items: ["Greek salad trays", "Spanakopitakia", "Souvlaki", "Lemon potatoes"],
   },
   {
     title: "Wine & Spirits",
+    image: "/img/menu/wine.avif",
     description: "Bottles, cocktails, and pours chosen to sit naturally with bright Greek food.",
     items: ["Greek wines", "Seafood pairings", "Classic cocktails", "Dinner bottles"],
   },
   {
     title: "Specials",
+    image: "/img/menu/specials.avif",
     description: "Ask about the daily specials from Maria's kitchen.",
     items: ["Seasonal seafood", "Homestyle dishes", "Chef favorites", "Desserts"],
   },
@@ -70,20 +70,46 @@ export default function MenuPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-10">
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {menuSections.map((section) => (
-            <article key={section.title} className="rounded-md border border-[#e8dcc4] bg-white p-6">
-              <h2 className="text-2xl font-semibold">{section.title}</h2>
-              <p className="mt-4 leading-7 text-[#4f574f]">{section.description}</p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {section.items.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-md bg-[#eef4ef] px-3 py-2 text-sm font-semibold text-[#24564a]"
-                  >
-                    {item}
-                  </span>
-                ))}
+        <div className="space-y-8">
+          {menuSections.map((section, index) => (
+            <article
+              key={section.title}
+              className="grid overflow-hidden rounded-md border border-[#e8dcc4] bg-white shadow-[0_18px_50px_rgba(23,33,28,0.08)] lg:grid-cols-[0.95fr_1.05fr]"
+            >
+              <div
+                className={`relative min-h-[320px] overflow-hidden bg-[#f8efe0] ${
+                  index % 2 === 1 ? "lg:order-2" : ""
+                }`}
+              >
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(247,198,107,0.28),transparent_38%)]" />
+                <div className="relative flex h-full min-h-[320px] items-center justify-center p-5 sm:p-8">
+                  <img
+                    src={section.image}
+                    alt={`${section.title} menu`}
+                    className="max-h-[420px] w-auto max-w-[88%] rounded-sm border border-[#e8dcc4] bg-white object-contain shadow-[0_18px_36px_rgba(23,33,28,0.18)]"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col justify-center p-7 sm:p-10">
+                <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
+                  Maria&apos;s Menu
+                </p>
+                <h2 className="mt-4 text-5xl font-semibold leading-[1.02]">
+                  {section.title}
+                </h2>
+                <p className="mt-5 max-w-xl text-[16px] leading-8 text-[#4f574f]">
+                  {section.description}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {section.items.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-md bg-[#eef4ef] px-3 py-2 text-sm font-bold text-[#24564a]"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </article>
           ))}

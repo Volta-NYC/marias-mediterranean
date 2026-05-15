@@ -36,7 +36,7 @@ export default function HomePage() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#111d18]/90 via-[#111d18]/60 to-[#111d18]/25" />
-        <div className="relative mx-auto flex min-h-[86vh] max-w-7xl flex-col justify-end px-6 pb-10 pt-32 sm:px-8 lg:px-10">
+        <div className="relative mx-auto flex min-h-[86vh] max-w-7xl flex-col justify-end px-6 pb-10 pt-44 sm:px-8 lg:px-10">
           <div className="max-w-4xl pb-8 text-white">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-[#f7c66b] sm:text-sm">
               Bayside Greek Seafood
