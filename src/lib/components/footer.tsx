@@ -1,9 +1,10 @@
 import Link from "next/link"
+import GoogleMap from "@/lib/components/google-map"
 
 export default function Footer() {
   return (
     <footer className="bg-[#101714] text-[#d8dfd8]">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:px-8 md:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-10">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:px-8 md:grid-cols-[1.1fr_0.8fr_0.7fr_1fr] lg:px-10">
         <div>
           <div className="text-2xl font-semibold text-white">Maria&apos;s Mediterranean</div>
           <p className="mt-4 max-w-md leading-7">
@@ -38,6 +39,9 @@ export default function Footer() {
               Hours & Contact
             </Link>
           </div>
+        </div>
+        <div className="overflow-hidden rounded-md border border-white/10 bg-white/5 p-2">
+          <GoogleMap className="min-h-[190px] rounded-sm" />
         </div>
       </div>
       <div className="border-t border-white/10 px-6 py-5 text-center text-xs text-[#aeb8ae]">

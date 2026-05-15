@@ -1,9 +1,10 @@
 import Link from "next/link"
+import GoogleMap from "@/lib/components/google-map"
 
 export default function ContactPage() {
   return (
     <div className="bg-[#fffaf1] text-[#17211c]">
-      <section className="mx-auto max-w-7xl px-6 pb-16 pt-32 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-7xl px-6 pb-16 pt-48 sm:px-8 lg:px-10">
         <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#b6402d]">
           Contact
         </p>
@@ -70,6 +71,12 @@ export default function ContactPage() {
               Email
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-20 sm:px-8 lg:px-10">
+        <div className="overflow-hidden rounded-md border border-[#e8dcc4] bg-white p-3 shadow-[0_18px_50px_rgba(23,33,28,0.08)]">
+          <GoogleMap className="min-h-[420px] rounded-sm" />
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import GoogleMap from "@/lib/components/google-map"
 
 const menuHighlights = [
   {
@@ -25,6 +26,11 @@ const serviceCards = [
   "Catering for family gatherings and off-premise events",
   "Free parking behind the church on 213th Street",
 ]
+
+const carouselImages = Array.from({ length: 8 }, (_, index) => ({
+  src: `/img/carousal/${index + 1}.avif`,
+  alt: `Maria's Mediterranean dish ${index + 1}`,
+}))
 
 export default function HomePage() {
   return (
@@ -107,7 +113,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#173f37] py-20 text-white">
+      <section className="overflow-hidden bg-[#173f37] py-20 text-white">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -132,15 +138,35 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+
+        <div className="mt-14">
+          <div className="relative">
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#173f37] to-transparent sm:w-32" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#173f37] to-transparent sm:w-32" />
+            <div className="carousel-track flex w-max gap-5 px-6 sm:px-8 lg:px-10">
+              {[...carouselImages, ...carouselImages].map((image, index) => (
+                <figure
+                  key={`${image.src}-${index}`}
+                  className="group relative h-64 w-[78vw] max-w-[360px] shrink-0 overflow-hidden rounded-md bg-white/10 shadow-[0_18px_40px_rgba(0,0,0,0.22)] ring-1 ring-white/15 sm:h-72 sm:w-[340px] lg:h-80 lg:w-[410px]"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f1915]/35 via-transparent to-transparent" />
+                </figure>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="grid lg:grid-cols-2">
-        <div className="min-h-[420px]">
-          <img
-            src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1200&q=85"
-            alt="Mediterranean dinner with grilled meat, vegetables, and lemon"
-            className="h-full min-h-[420px] w-full object-cover"
-          />
+        <div className="min-h-[420px] bg-[#173f37] p-4">
+          <div className="h-full min-h-[420px] overflow-hidden rounded-md border border-white/15 shadow-[0_18px_50px_rgba(23,33,28,0.18)]">
+            <GoogleMap className="min-h-[420px]" />
+          </div>
         </div>
         <div className="bg-white px-6 py-16 sm:px-8 lg:px-14">
           <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">

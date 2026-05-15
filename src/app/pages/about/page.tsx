@@ -18,12 +18,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-10">
-        <div>
+      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+        <div className="space-y-8">
+          <div className="overflow-hidden rounded-md border border-[#e8dcc4] bg-white p-3 shadow-[0_18px_50px_rgba(23,33,28,0.10)]">
+            <img
+              src="/img/owner.avif"
+              alt="Maria Petridis, owner and chef of Maria's Mediterranean"
+              className="h-[520px] w-full rounded-sm object-cover object-top"
+            />
+          </div>
           <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#b6402d]">
             The Chef
           </p>
-          <h2 className="mt-4 text-4xl font-semibold leading-tight">
+          <h2 className="text-4xl font-semibold leading-tight">
             Maria Petridis cooks from experience, not formulas.
           </h2>
         </div>
