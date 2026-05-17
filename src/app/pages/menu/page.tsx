@@ -4,30 +4,35 @@ const menuSections = [
   {
     title: "Dinner & Children's Menu",
     image: "/img/menu/dinnerchildren.avif",
+    href: "/pages/menu/dinner-children",
     description: "The full dinner menu, family plates, seafood, meats, sides, and children's options.",
     items: ["Greek spreads", "Whole fish", "Seafood", "Children's plates"],
   },
   {
     title: "Lunch",
     image: "/img/menu/lunch.avif",
+    href: "/pages/menu/lunch",
     description: "Monday through Saturday lunch plates from 11 am to 3 pm.",
     items: ["Platters", "Greek specialties", "Salads", "Fresh sides"],
   },
   {
     title: "Catering",
     image: "/img/menu/catering.avif",
+    href: "/pages/menu/catering",
     description: "Off-premise catering for gatherings, office meals, holidays, and family events.",
     items: ["Greek salad trays", "Spanakopitakia", "Souvlaki", "Lemon potatoes"],
   },
   {
     title: "Wine & Spirits",
     image: "/img/menu/wine.avif",
+    href: "/pages/menu/wine-spirits",
     description: "Bottles, cocktails, and pours chosen to sit naturally with bright Greek food.",
     items: ["Greek wines", "Seafood pairings", "Classic cocktails", "Dinner bottles"],
   },
   {
     title: "Specials",
     image: "/img/menu/specials.avif",
+    href: "/pages/menu/specials",
     description: "Ask about the daily specials from Maria's kitchen.",
     items: ["Seasonal seafood", "Homestyle dishes", "Chef favorites", "Desserts"],
   },
@@ -110,6 +115,14 @@ export default function MenuPage() {
                     </span>
                   ))}
                 </div>
+                {section.href ? (
+                  <Link
+                    href={section.href}
+                    className="mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-[#173f37] px-5 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition hover:bg-[#24564a]"
+                  >
+                    View Full Menu
+                  </Link>
+                ) : null}
               </div>
             </article>
           ))}

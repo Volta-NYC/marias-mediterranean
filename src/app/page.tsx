@@ -106,27 +106,27 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
-          <div>
-            <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
-              From Skoutari to Bayside
-            </p>
-            <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-[1.06] text-[#17211c] sm:text-5xl">
-              A kitchen built on memory, freshness, and a modern Greek point of view.
-            </h2>
-          </div>
-          <div className="space-y-5 text-[17px] leading-8 text-[#4f574f] sm:text-lg">
-            <p>
-              Chef Maria Petridis grew up in Serres, Greece, learning the details
-              of Mediterranean cooking by watching her mother. At Maria&apos;s, those
-              recipes meet New York energy through grilled fish, bright herbs,
-              lemon potatoes, and daily specials.
-            </p>
-            <p>
-              The restaurant opened in Bayside on January 10, 2011, with a clear
-              promise: fresh ingredients, generous plates, and a table where
-              families with different dietary needs can all eat well.
-            </p>
-          </div>
+        <div>
+          <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
+            From Skoutari to Bayside
+          </p>
+          <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-[1.06] text-[#17211c] sm:text-5xl">
+            A kitchen built on memory, freshness, and a modern Greek point of view.
+          </h2>
+        </div>
+        <div className="space-y-5 text-[17px] leading-8 text-[#4f574f] sm:text-lg">
+          <p>
+            Chef Maria Petridis grew up in Serres, Greece, learning the details
+            of Mediterranean cooking by watching her mother. At Maria&apos;s, those
+            recipes meet New York energy through grilled fish, bright herbs,
+            lemon potatoes, and daily specials.
+          </p>
+          <p>
+            The restaurant opened in Bayside on January 10, 2011, with a clear
+            promise: fresh ingredients, generous plates, and a table where
+            families with different dietary needs can all eat well.
+          </p>
+        </div>
       </section>
 
       <section className="relative overflow-hidden bg-[#101714] py-16 text-white sm:py-20">
