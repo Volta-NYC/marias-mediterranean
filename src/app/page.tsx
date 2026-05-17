@@ -32,6 +32,11 @@ const carouselImages = Array.from({ length: 8 }, (_, index) => ({
   alt: `Maria's Mediterranean dish ${index + 1}`,
 }))
 
+const spaceImages = Array.from({ length: 5 }, (_, index) => ({
+  src: `/img/space/${index + 1}.avif`,
+  alt: `Maria's Mediterranean dining room ${index + 1}`,
+}))
+
 export default function HomePage() {
   return (
     <div className="bg-[#fffaf1] text-[#17211c]">
@@ -110,6 +115,50 @@ export default function HomePage() {
             promise: fresh ingredients, generous plates, and a table where
             families with different dietary needs can all eat well.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-[#10251f] py-16 text-white sm:py-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#f7c66b]">
+                The Space
+              </p>
+              <h2 className="mt-4 text-4xl font-semibold leading-[1.06] text-white sm:text-5xl">
+                A warm room for seafood dinners, family tables, and easy nights out.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-[16px] leading-8 text-[#d8dfd8] sm:text-lg">
+              Step inside Maria&apos;s for a relaxed Bayside dining room with the
+              polish of a special occasion and the comfort of a neighborhood
+              restaurant.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[220px_220px]">
+            <figure className="group relative min-h-[280px] overflow-hidden rounded-md bg-[#173f37] shadow-[0_18px_50px_rgba(23,33,28,0.12)] sm:col-span-2 lg:row-span-2 lg:min-h-0">
+              <img
+                src={spaceImages[0].src}
+                alt={spaceImages[0].alt}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#101714]/30 to-transparent" />
+            </figure>
+
+            {spaceImages.slice(1).map((image) => (
+              <figure
+                key={image.src}
+                className="group relative min-h-[220px] overflow-hidden rounded-md bg-[#173f37] shadow-[0_18px_42px_rgba(23,33,28,0.10)]"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
