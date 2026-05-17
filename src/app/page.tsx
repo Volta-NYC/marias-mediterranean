@@ -94,6 +94,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="relative overflow-hidden bg-[#101714] py-16 text-white sm:py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(247,198,107,0.36),transparent_34%),radial-gradient(circle_at_82%_22%,rgba(216,69,47,0.22),transparent_30%)]" />
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-10">
+          <figure className="overflow-hidden rounded-md bg-[#fffaf1] p-4 shadow-[0_20px_60px_rgba(0,0,0,0.28)]">
+            <img
+              src="/img/chopped.jpg"
+              alt="Maria Petridis featured on Food Network's Chopped"
+              className="h-auto w-full rounded-sm object-contain"
+            />
+          </figure>
+
+          <div>
+            <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#f7c66b]">
+              Food Network Winner
+            </p>
+            <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-[1.02] sm:text-6xl">
+              Maria Petridis won{" "}
+              <span className="font-bold text-[#f7c66b]">CHOPPED</span>.
+            </h2>
+            <p className="mt-6 max-w-2xl text-[17px] leading-8 text-[#d8dfd8] sm:text-lg">
+              The chef behind Maria&apos;s Mediterranean brought her Greek cooking
+              instincts to Food Network&apos;s competition kitchen and came home a
+              champion.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {["Champion chef", "Greek seafood", "Bayside dining"].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-md border border-[#f7c66b]/35 bg-white/8 px-4 py-2 text-sm font-bold text-[#f7f0df]"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
         <div>
           <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
