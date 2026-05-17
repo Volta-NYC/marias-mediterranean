@@ -20,7 +20,7 @@ export default function AboutPage() {
 
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
         <div className="space-y-8">
-          <div className="overflow-hidden rounded-md border border-[#e8dcc4] bg-white p-3 shadow-[0_18px_50px_rgba(23,33,28,0.10)]">
+          <div className="accent-card overflow-hidden rounded-md border bg-white p-3 shadow-[0_18px_50px_rgba(23,33,28,0.10)]">
             <img
               src="/img/owner.avif"
               alt="Maria Petridis, owner and chef of Maria's Mediterranean"
@@ -62,7 +62,7 @@ export default function AboutPage() {
             ["Known for", "Whole grilled fish and homestyle Greek specials"],
             ["Care", "A wide gluten-free menu and allergy-aware service"],
           ].map(([label, value]) => (
-            <div key={label} className="rounded-md border border-[#e8dcc4] p-6">
+            <div key={label} className="accent-card rounded-md border bg-white p-6">
               <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#b6402d]">
                 {label}
               </p>

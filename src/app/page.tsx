@@ -94,10 +94,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+          <div>
+            <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
+              From Skoutari to Bayside
+            </p>
+            <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-[1.06] text-[#17211c] sm:text-5xl">
+              A kitchen built on memory, freshness, and a modern Greek point of view.
+            </h2>
+          </div>
+          <div className="space-y-5 text-[17px] leading-8 text-[#4f574f] sm:text-lg">
+            <p>
+              Chef Maria Petridis grew up in Serres, Greece, learning the details
+              of Mediterranean cooking by watching her mother. At Maria&apos;s, those
+              recipes meet New York energy through grilled fish, bright herbs,
+              lemon potatoes, and daily specials.
+            </p>
+            <p>
+              The restaurant opened in Bayside on January 10, 2011, with a clear
+              promise: fresh ingredients, generous plates, and a table where
+              families with different dietary needs can all eat well.
+            </p>
+          </div>
+      </section>
+
       <section className="relative overflow-hidden bg-[#101714] py-16 text-white sm:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(247,198,107,0.36),transparent_34%),radial-gradient(circle_at_82%_22%,rgba(216,69,47,0.22),transparent_30%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-10">
-          <figure className="overflow-hidden rounded-md bg-[#fffaf1] p-4 shadow-[0_20px_60px_rgba(0,0,0,0.28)]">
+          <figure className="accent-card overflow-hidden rounded-md border bg-[#fffaf1] p-4 shadow-[0_20px_60px_rgba(0,0,0,0.28)]">
             <img
               src="/img/chopped.jpg"
               alt="Maria Petridis featured on Food Network's Chopped"
@@ -132,30 +156,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
-        <div>
-          <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
-            From Skoutari to Bayside
-          </p>
-          <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-[1.06] text-[#17211c] sm:text-5xl">
-            A kitchen built on memory, freshness, and a modern Greek point of view.
-          </h2>
-        </div>
-        <div className="space-y-5 text-[17px] leading-8 text-[#4f574f] sm:text-lg">
-          <p>
-            Chef Maria Petridis grew up in Serres, Greece, learning the details
-            of Mediterranean cooking by watching her mother. At Maria&apos;s, those
-            recipes meet New York energy through grilled fish, bright herbs,
-            lemon potatoes, and daily specials.
-          </p>
-          <p>
-            The restaurant opened in Bayside on January 10, 2011, with a clear
-            promise: fresh ingredients, generous plates, and a table where
-            families with different dietary needs can all eat well.
-          </p>
-        </div>
-      </section>
-
       <section className="bg-[#10251f] py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
@@ -175,7 +175,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[220px_220px]">
-            <figure className="group relative min-h-[280px] overflow-hidden rounded-md bg-[#173f37] shadow-[0_18px_50px_rgba(23,33,28,0.12)] sm:col-span-2 lg:row-span-2 lg:min-h-0">
+            <figure className="accent-card-dark group relative min-h-[280px] overflow-hidden rounded-md border bg-[#173f37] shadow-[0_18px_50px_rgba(23,33,28,0.12)] sm:col-span-2 lg:row-span-2 lg:min-h-0">
               <img
                 src={spaceImages[0].src}
                 alt={spaceImages[0].alt}
@@ -187,7 +187,7 @@ export default function HomePage() {
             {spaceImages.slice(1).map((image) => (
               <figure
                 key={image.src}
-                className="group relative min-h-[220px] overflow-hidden rounded-md bg-[#173f37] shadow-[0_18px_42px_rgba(23,33,28,0.10)]"
+                className="accent-card-dark group relative min-h-[220px] overflow-hidden rounded-md border bg-[#173f37] shadow-[0_18px_42px_rgba(23,33,28,0.10)]"
               >
                 <img
                   src={image.src}
@@ -218,7 +218,7 @@ export default function HomePage() {
           </div>
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {menuHighlights.map((item) => (
-              <article key={item.name} className="rounded-md border border-white/18 bg-white/8 p-6">
+              <article key={item.name} className="accent-card-dark rounded-md border bg-white/8 p-6">
                 <h3 className="text-3xl font-semibold leading-none">{item.name}</h3>
                 <p className="mt-5 text-[15px] leading-7 text-[#dce8df]">{item.detail}</p>
               </article>
@@ -251,7 +251,7 @@ export default function HomePage() {
 
       <section className="grid lg:grid-cols-2">
         <div className="min-h-[320px] bg-[#173f37] p-3 sm:min-h-[420px] sm:p-4">
-          <div className="h-full min-h-[320px] overflow-hidden rounded-md border border-white/15 shadow-[0_18px_50px_rgba(23,33,28,0.18)] sm:min-h-[420px]">
+          <div className="accent-card-dark h-full min-h-[320px] overflow-hidden rounded-md border shadow-[0_18px_50px_rgba(23,33,28,0.18)] sm:min-h-[420px]">
             <GoogleMap className="min-h-[320px] sm:min-h-[420px]" />
           </div>
         </div>

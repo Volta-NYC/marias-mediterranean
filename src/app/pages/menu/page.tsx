@@ -74,7 +74,7 @@ export default function MenuPage() {
           {menuSections.map((section, index) => (
             <article
               key={section.title}
-              className="grid overflow-hidden rounded-md border border-[#e8dcc4] bg-white shadow-[0_18px_50px_rgba(23,33,28,0.08)] lg:grid-cols-[0.95fr_1.05fr]"
+              className="accent-card grid overflow-hidden rounded-md border bg-white shadow-[0_18px_50px_rgba(23,33,28,0.08)] lg:grid-cols-[0.95fr_1.05fr]"
             >
               <div
                 className={`relative min-h-[320px] overflow-hidden bg-[#f8efe0] ${

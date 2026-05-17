@@ -20,7 +20,7 @@ export default function ContactPage() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-6 px-5 pb-16 sm:px-8 sm:pb-20 lg:grid-cols-3 lg:px-10">
-        <div className="rounded-md bg-[#173f37] p-6 text-white">
+        <div className="accent-card-dark rounded-md border bg-[#173f37] p-6 text-white">
           <h2 className="text-2xl font-semibold">Restaurant</h2>
           <p className="mt-5 leading-8 text-[#dce8df]">
             38-11 Bell Blvd
@@ -37,7 +37,7 @@ export default function ContactPage() {
           </Link>
         </div>
 
-        <div className="rounded-md border border-[#e8dcc4] bg-white p-6">
+        <div className="accent-card rounded-md border bg-white p-6">
           <h2 className="text-2xl font-semibold">Hours</h2>
           <p className="mt-5 leading-8 text-[#4f574f]">
             Monday - Thursday 11 am to 10 pm
@@ -48,7 +48,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="rounded-md border border-[#e8dcc4] bg-white p-6">
+        <div className="accent-card rounded-md border bg-white p-6">
           <h2 className="text-2xl font-semibold">Reach Us</h2>
           <p className="mt-5 leading-8 text-[#4f574f]">
             Manager@mariasonbell.com
@@ -75,14 +75,14 @@ export default function ContactPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:px-10">
-        <div className="overflow-hidden rounded-md border border-[#e8dcc4] bg-white p-3 shadow-[0_18px_50px_rgba(23,33,28,0.08)]">
+        <div className="accent-card overflow-hidden rounded-md border bg-white p-3 shadow-[0_18px_50px_rgba(23,33,28,0.08)]">
           <GoogleMap className="min-h-[320px] rounded-sm sm:min-h-[420px]" />
         </div>
       </section>
 
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="rounded-md border border-[#e8dcc4] bg-[#fffaf1] p-6 sm:p-8">
+          <div className="accent-card rounded-md border bg-[#fffaf1] p-6 sm:p-8">
             <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#b6402d]">
               Parking
             </p>
