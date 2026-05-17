@@ -22,8 +22,8 @@ const menuHighlights = [
 
 const serviceCards = [
   "Indoor and outdoor dining seven days a week",
-  "Pickup ordering with a 10% online discount",
-  "Catering for family gatherings and off-premise events",
+  "Fast pickup ordering available online",
+  "Dedicated gluten-free menu with many choices",
   "Free parking behind the church on 213th Street",
 ]
 
@@ -59,6 +59,17 @@ export default function HomePage() {
               Homestyle Greek cooking, fresh whole fish, and generous family
               hospitality on Bell Boulevard.
             </p>
+            <div className="mt-6 max-w-lg rounded-md border border-[#f7c66b]/55 bg-[#101714]/72 p-3 shadow-[0_18px_42px_rgba(0,0,0,0.22)] backdrop-blur sm:p-4">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#f7c66b]">
+                Online Pickup Special
+              </p>
+              <p className="mt-2 font-serif text-3xl font-semibold leading-none text-white sm:text-4xl">
+                10% off when you order online
+              </p>
+              <p className="mt-2 text-sm font-semibold leading-6 text-[#f7f0df]">
+                Save on pickup orders placed through Maria&apos;s online ordering.
+              </p>
+            </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="https://www.mariasonbell.com/online-ordering"
@@ -223,6 +234,17 @@ export default function HomePage() {
                 <p className="mt-5 text-[15px] leading-7 text-[#dce8df]">{item.detail}</p>
               </article>
             ))}
+          </div>
+          <div className="mt-6 rounded-md border border-[#f7c66b]/35 bg-[#f7c66b]/12 p-5 text-[#f7f0df]">
+            <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#f7c66b]">
+              Gluten-Free Friendly
+            </p>
+            <p className="mt-2 max-w-3xl text-[16px] font-semibold leading-7">
+              At Maria&apos;s Mediterranean we want everyone to be able to enjoy
+              themselves at Dinner. This is why we have made a majority of our
+              menu Gluten free. Also for other allergies we have had our staff
+              well versed in every ingredient used in our dishes.
+            </p>
           </div>
         </div>
 
