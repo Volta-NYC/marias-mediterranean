@@ -38,16 +38,16 @@ export default function MenuPage() {
     <div className="bg-[#fffaf1] text-[#17211c]">
       <section className="relative min-h-[60vh] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=1800&q=85"
-          alt="Mediterranean table with salad, vegetables, bread, and shared plates"
+          src="/img/menuhero.avif"
+          alt="Maria's Mediterranean menu spread"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-[#111d18]/68" />
-        <div className="relative mx-auto flex min-h-[60vh] max-w-7xl flex-col justify-end px-6 pb-14 pt-32 sm:px-8 lg:px-10">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#f7c66b]">
+        <div className="relative mx-auto flex min-h-[60vh] max-w-7xl flex-col justify-end px-5 pb-12 pt-40 sm:px-8 sm:pt-44 lg:px-10">
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#f7c66b] sm:text-sm">
             Menus
           </p>
-          <h1 className="mt-4 max-w-4xl text-5xl font-semibold leading-tight text-white">
+          <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-[1.08] text-white sm:text-5xl">
             Fresh Greek seafood, lunch plates, catering, wine, and daily specials.
           </h1>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -55,13 +55,13 @@ export default function MenuPage() {
               href="https://www.mariasonbell.com/online-ordering"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-h-12 items-center justify-center rounded-md bg-[#d8452f] px-6 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-[#b93625]"
+              className="inline-flex min-h-12 items-center justify-center rounded-md bg-[#d8452f] px-6 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-[#b93625]"
             >
               Order Online
             </Link>
             <Link
               href="tel:17182791606"
-              className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/70 px-6 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-[#17211c]"
+              className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/70 px-6 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-white hover:text-[#17211c]"
             >
               Call Restaurant
             </Link>
@@ -69,8 +69,8 @@ export default function MenuPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-10">
-        <div className="space-y-8">
+      <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
+        <div className="space-y-6 sm:space-y-8">
           {menuSections.map((section, index) => (
             <article
               key={section.title}
@@ -82,19 +82,19 @@ export default function MenuPage() {
                 }`}
               >
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(247,198,107,0.28),transparent_38%)]" />
-                <div className="relative flex h-full min-h-[320px] items-center justify-center p-5 sm:p-8">
+                <div className="relative flex h-full min-h-[320px] items-center justify-center p-4 sm:p-8">
                   <img
                     src={section.image}
                     alt={`${section.title} menu`}
-                    className="max-h-[420px] w-auto max-w-[88%] rounded-sm border border-[#e8dcc4] bg-white object-contain shadow-[0_18px_36px_rgba(23,33,28,0.18)]"
+                    className="max-h-[360px] w-auto max-w-[94%] rounded-sm border border-[#e8dcc4] bg-white object-contain shadow-[0_18px_36px_rgba(23,33,28,0.18)] sm:max-h-[420px] sm:max-w-[88%]"
                   />
                 </div>
               </div>
-              <div className="flex flex-col justify-center p-7 sm:p-10">
+              <div className="flex flex-col justify-center p-6 sm:p-10">
                 <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
                   Maria&apos;s Menu
                 </p>
-                <h2 className="mt-4 text-5xl font-semibold leading-[1.02]">
+                <h2 className="mt-4 text-4xl font-semibold leading-[1.04] sm:text-5xl">
                   {section.title}
                 </h2>
                 <p className="mt-5 max-w-xl text-[16px] leading-8 text-[#4f574f]">
@@ -117,12 +117,12 @@ export default function MenuPage() {
       </section>
 
       <section className="bg-[#173f37] py-16 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-10">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#f7c66b]">
               Pickup
             </p>
-            <h2 className="mt-3 text-3xl font-semibold">
+            <h2 className="mt-3 text-3xl font-semibold leading-tight">
               Order online for a 10% pickup discount.
             </h2>
           </div>
@@ -130,7 +130,7 @@ export default function MenuPage() {
             href="https://www.mariasonbell.com/online-ordering"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 text-sm font-bold uppercase tracking-[0.18em] text-[#173f37] transition hover:bg-[#f7c66b]"
+            className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 text-sm font-bold uppercase tracking-[0.12em] text-[#173f37] transition hover:bg-[#f7c66b]"
           >
             Start Order
           </Link>

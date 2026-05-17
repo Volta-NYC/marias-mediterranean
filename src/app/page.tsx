@@ -42,15 +42,15 @@ export default function HomePage() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#111d18]/90 via-[#111d18]/60 to-[#111d18]/25" />
-        <div className="relative mx-auto flex min-h-[86vh] max-w-7xl flex-col justify-end px-6 pb-10 pt-44 sm:px-8 lg:px-10">
+        <div className="relative mx-auto flex min-h-[86vh] max-w-7xl flex-col justify-end px-5 pb-10 pt-40 sm:px-8 sm:pt-44 lg:px-10">
           <div className="max-w-4xl pb-8 text-white">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-[#f7c66b] sm:text-sm">
               Bayside Greek Seafood
             </p>
-            <h1 className="max-w-4xl text-6xl font-semibold leading-[0.95] sm:text-7xl lg:text-8xl">
+            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] sm:text-7xl lg:text-8xl">
               Maria&apos;s Mediterranean
             </h1>
-            <p className="mt-7 max-w-2xl text-lg font-medium leading-8 text-[#f7f0df] sm:text-xl">
+            <p className="mt-7 max-w-2xl text-base font-medium leading-8 text-[#f7f0df] sm:text-xl">
               Homestyle Greek cooking, fresh whole fish, and generous family
               hospitality on Bell Boulevard.
             </p>
@@ -71,7 +71,7 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="grid gap-3 border-t border-white/25 pt-5 text-sm font-semibold leading-6 text-white sm:grid-cols-3">
+          <div className="grid gap-3 border-t border-white/25 pt-5 text-xs font-semibold leading-6 text-white sm:grid-cols-3 sm:text-sm">
             <div>38-11 Bell Blvd, Bayside, NY 11361</div>
             <div>(718) 279-1606</div>
             <div>Lunch and dinner daily</div>
@@ -80,7 +80,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-y border-[#e8dcc4] bg-white">
-        <div className="mx-auto grid max-w-7xl gap-0 px-6 py-6 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-0 px-5 py-6 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:px-10">
           {serviceCards.map((item) => (
             <div key={item} className="border-[#e8dcc4] py-4 sm:px-5 lg:border-l">
               <p className="text-sm font-bold leading-6 text-[#24564a]">{item}</p>
@@ -89,12 +89,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+      <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
         <div>
           <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
             From Skoutari to Bayside
           </p>
-          <h2 className="mt-4 max-w-xl text-5xl font-semibold leading-[1.04] text-[#17211c]">
+          <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-[1.06] text-[#17211c] sm:text-5xl">
             A kitchen built on memory, freshness, and a modern Greek point of view.
           </h2>
         </div>
@@ -114,13 +114,13 @@ export default function HomePage() {
       </section>
 
       <section className="overflow-hidden bg-[#173f37] py-20 text-white">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#f7c66b]">
                 Menu
               </p>
-              <h2 className="mt-4 text-5xl font-semibold leading-[1.04]">What to come hungry for</h2>
+              <h2 className="mt-4 text-4xl font-semibold leading-[1.06] sm:text-5xl">What to come hungry for</h2>
             </div>
             <Link
               href="/pages/menu"
@@ -143,11 +143,11 @@ export default function HomePage() {
           <div className="relative">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#173f37] to-transparent sm:w-32" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#173f37] to-transparent sm:w-32" />
-            <div className="carousel-track flex w-max gap-5 px-6 sm:px-8 lg:px-10">
+            <div className="carousel-track flex w-max gap-4 px-5 sm:gap-5 sm:px-8 lg:px-10">
               {[...carouselImages, ...carouselImages].map((image, index) => (
                 <figure
                   key={`${image.src}-${index}`}
-                  className="group relative h-64 w-[78vw] max-w-[360px] shrink-0 overflow-hidden rounded-md bg-white/10 shadow-[0_18px_40px_rgba(0,0,0,0.22)] ring-1 ring-white/15 sm:h-72 sm:w-[340px] lg:h-80 lg:w-[410px]"
+                  className="group relative h-56 w-[82vw] max-w-[330px] shrink-0 overflow-hidden rounded-md bg-white/10 shadow-[0_18px_40px_rgba(0,0,0,0.22)] ring-1 ring-white/15 sm:h-72 sm:w-[340px] lg:h-80 lg:w-[410px]"
                 >
                   <img
                     src={image.src}
@@ -163,16 +163,16 @@ export default function HomePage() {
       </section>
 
       <section className="grid lg:grid-cols-2">
-        <div className="min-h-[420px] bg-[#173f37] p-4">
-          <div className="h-full min-h-[420px] overflow-hidden rounded-md border border-white/15 shadow-[0_18px_50px_rgba(23,33,28,0.18)]">
-            <GoogleMap className="min-h-[420px]" />
+        <div className="min-h-[320px] bg-[#173f37] p-3 sm:min-h-[420px] sm:p-4">
+          <div className="h-full min-h-[320px] overflow-hidden rounded-md border border-white/15 shadow-[0_18px_50px_rgba(23,33,28,0.18)] sm:min-h-[420px]">
+            <GoogleMap className="min-h-[320px] sm:min-h-[420px]" />
           </div>
         </div>
-        <div className="bg-white px-6 py-16 sm:px-8 lg:px-14">
+        <div className="bg-white px-5 py-14 sm:px-8 sm:py-16 lg:px-14">
           <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
             Visit
           </p>
-          <h2 className="mt-4 text-5xl font-semibold leading-[1.04] text-[#17211c]">
+          <h2 className="mt-4 text-4xl font-semibold leading-[1.06] text-[#17211c] sm:text-5xl">
             Easy dinner plans on Bell Boulevard.
           </h2>
           <div className="mt-8 grid gap-6 text-[#4f574f] sm:grid-cols-2">

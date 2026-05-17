@@ -12,22 +12,22 @@ const links = [
 export default function Navbar() {
   return (
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/15 bg-[#10251f]/90 text-white backdrop-blur">
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-4 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-10">
         <Link
           href="/"
-          className="inline-flex items-center rounded-full border border-[#f7c66b]/45 bg-[#fffaf1] p-2 shadow-[0_10px_30px_rgba(0,0,0,0.22)] ring-1 ring-white/20 transition hover:-translate-y-0.5 hover:shadow-[0_14px_36px_rgba(0,0,0,0.28)]"
+          className="inline-flex shrink-0 items-center rounded-full border border-[#f7c66b]/45 bg-[#fffaf1] p-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.22)] ring-1 ring-white/20 transition hover:-translate-y-0.5 hover:shadow-[0_14px_36px_rgba(0,0,0,0.28)] lg:p-2"
           aria-label="Maria's Mediterranean home"
         >
           <img
             src="/img/logo.jpg"
             alt="Maria's Mediterranean"
-            className="h-20 w-20 rounded-full object-contain"
+            className="h-14 w-14 rounded-full object-contain sm:h-16 sm:w-16 lg:h-20 lg:w-20"
           />
         </Link>
 
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs font-extrabold uppercase tracking-[0.12em] text-[#f7f0df]">
+        <div className="ml-auto flex min-w-0 items-center justify-end gap-4 overflow-x-auto whitespace-nowrap text-[11px] font-extrabold uppercase tracking-[0.1em] text-[#f7f0df] sm:gap-6 lg:overflow-visible lg:text-xs lg:tracking-[0.12em]">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="transition hover:text-[#f7c66b]">
+            <Link key={link.href} href={link.href} className="shrink-0 transition hover:text-[#f7c66b]">
               {link.label}
             </Link>
           ))}
@@ -35,7 +35,7 @@ export default function Navbar() {
             href="https://www.mariasonbell.com/online-ordering"
             target="_blank"
             rel="noreferrer"
-            className="rounded-md bg-[#d8452f] px-4 py-2 text-white transition hover:bg-[#b93625]"
+            className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-md bg-[#d8452f] px-4 text-xs font-extrabold uppercase tracking-[0.1em] text-white transition hover:bg-[#b93625] lg:min-h-11"
           >
             Order
           </Link>
