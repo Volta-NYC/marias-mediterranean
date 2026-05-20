@@ -97,6 +97,9 @@ export default function Footer() {
             <Link href="/pages/menu" className="hover:text-white">
               Menus
             </Link>
+            <Link href="/pages/loyalty" className="hover:text-white">
+              Loyalty
+            </Link>
             <Link href="/pages/about" className="hover:text-white">
               Chef Story
             </Link>
