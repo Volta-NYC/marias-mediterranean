@@ -467,67 +467,6 @@ export default function MenuPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-18 lg:px-10">
-        <div className="mb-8 max-w-3xl">
-          <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-[#b6402d]">
-            Explore The Menu
-          </p>
-          <h2 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
-            Choose a section, then browse the full menu below.
-          </h2>
-        </div>
-        <div className="space-y-6 sm:space-y-8">
-          {menuCategories.map((section, index) => (
-            <article
-              key={section.title}
-              className="accent-card grid overflow-hidden rounded-md border bg-white shadow-[0_18px_50px_rgba(23,33,28,0.08)] lg:grid-cols-[0.95fr_1.05fr]"
-            >
-              <div
-                className={`relative min-h-[320px] overflow-hidden bg-[#f8efe0] ${
-                  index % 2 === 1 ? "lg:order-2" : ""
-                }`}
-              >
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(247,198,107,0.28),transparent_38%)]" />
-                <div className="relative flex h-full min-h-[320px] items-center justify-center p-4 sm:p-8">
-                  <img
-                    src={section.image}
-                    alt={`${section.title} menu`}
-                    className="max-h-[360px] w-auto max-w-[94%] rounded-sm border border-[#e8dcc4] bg-white object-contain shadow-[0_18px_36px_rgba(23,33,28,0.18)] sm:max-h-[420px] sm:max-w-[88%]"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col justify-center p-6 sm:p-10">
-                <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
-                  Maria&apos;s Menu
-                </p>
-                <h2 className="mt-4 text-4xl font-semibold leading-[1.04] sm:text-5xl">
-                  {section.title}
-                </h2>
-                <p className="mt-5 max-w-xl text-[16px] leading-8 text-[#4f574f]">
-                  {section.description}
-                </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {section.items.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-md bg-[#eef4ef] px-3 py-2 text-sm font-bold text-[#24564a]"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-                <a
-                  href={`#${section.id}`}
-                  className="mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-[#173f37] px-5 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition hover:bg-[#24564a]"
-                >
-                  View This Section
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="border-y border-[#e8dcc4] bg-white/70 py-5">
         <div className="mx-auto flex max-w-7xl gap-3 overflow-x-auto px-5 sm:px-8 lg:px-10">
           {menuCategories.map((category) => (

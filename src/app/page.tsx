@@ -1,30 +1,49 @@
 import Link from "next/link"
 import GoogleMap from "@/lib/components/google-map"
 
-const menuHighlights = [
-  {
-    name: "Whole Fish",
-    detail: "Greek orata, pink sea bream, and daily market selections grilled simply.",
-  },
-  {
-    name: "Greek Specials",
-    detail: "Moussaka, pastichio, lemon potatoes, souvlaki, and homestyle plates.",
-  },
-  {
-    name: "Seafood",
-    detail: "Scallops, salmon, shrimp saganaki, calamari, and fresh coastal favorites.",
-  },
-  {
-    name: "Gluten Free",
-    detail: "A broad gluten-free menu supported by a staff trained on ingredients.",
-  },
-]
-
 const serviceCards = [
   "Indoor and outdoor dining seven days a week",
   "Fast pickup ordering available online",
   "Dedicated gluten-free menu with many choices",
   "Free parking behind the church on 213th Street",
+]
+
+const menuSections = [
+  {
+    title: "Dinner & Children's Menu",
+    image: "/img/menu/dinnerchildren.avif",
+    href: "/pages/menu#dinner-children",
+    description: "Greek spreads, fresh seafood, meats, sides, and children's plates.",
+    items: ["Greek spreads", "Whole fish", "Seafood", "Children's plates"],
+  },
+  {
+    title: "Lunch",
+    image: "/img/menu/lunch.avif",
+    href: "/pages/menu#lunch",
+    description: "Monday through Saturday lunch plates from 11 am to 3 pm.",
+    items: ["Platters", "Greek specialties", "Salads", "Fresh sides"],
+  },
+  {
+    title: "Catering",
+    image: "/img/menu/catering.avif",
+    href: "/pages/menu#catering",
+    description: "Off-premise catering for gatherings, office meals, and family events.",
+    items: ["Salad trays", "Spanakopitakia", "Souvlaki", "Lemon potatoes"],
+  },
+  {
+    title: "Wine & Spirits",
+    image: "/img/menu/wine.avif",
+    href: "/pages/menu#wine-spirits",
+    description: "Greek wines, classic pours, spirits, ouzo, and pairing-friendly bottles.",
+    items: ["Greek wines", "Seafood pairings", "Classic cocktails", "Dinner bottles"],
+  },
+  {
+    title: "Specials",
+    image: "/img/menu/specials.avif",
+    href: "/pages/menu#specials",
+    description: "Seasonal dishes and drinks from Maria's kitchen.",
+    items: ["Seasonal seafood", "Homestyle dishes", "Chef favorites", "Desserts"],
+  },
 ]
 
 const carouselImages = Array.from({ length: 8 }, (_, index) => ({
@@ -227,11 +246,55 @@ export default function HomePage() {
               Explore Menu
             </Link>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {menuHighlights.map((item) => (
-              <article key={item.name} className="accent-card-dark rounded-md border bg-white/8 p-6">
-                <h3 className="text-3xl font-semibold leading-none">{item.name}</h3>
-                <p className="mt-5 text-[15px] leading-7 text-[#dce8df]">{item.detail}</p>
+          <div className="mt-10 space-y-6 sm:space-y-8">
+            {menuSections.map((section, index) => (
+              <article
+                key={section.title}
+                className="accent-card-dark grid overflow-hidden rounded-md border bg-[#fffaf1] text-[#17211c] shadow-[0_22px_60px_rgba(0,0,0,0.20)] lg:grid-cols-[0.95fr_1.05fr]"
+              >
+                <Link
+                  href={section.href}
+                  className={`relative min-h-[300px] overflow-hidden bg-[#f8efe0] ${
+                    index % 2 === 1 ? "lg:order-2" : ""
+                  }`}
+                  aria-label={`View ${section.title}`}
+                >
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(247,198,107,0.28),transparent_38%)]" />
+                  <div className="relative flex h-full min-h-[300px] items-center justify-center p-4 sm:p-8">
+                    <img
+                      src={section.image}
+                      alt={`${section.title} menu`}
+                      className="max-h-[340px] w-auto max-w-[94%] rounded-sm border border-[#e8dcc4] bg-white object-contain shadow-[0_18px_36px_rgba(23,33,28,0.18)] transition duration-500 hover:scale-[1.02] sm:max-h-[400px] sm:max-w-[88%]"
+                    />
+                  </div>
+                </Link>
+                <div className="flex flex-col justify-center p-6 sm:p-10">
+                  <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#b6402d]">
+                    Maria&apos;s Menu
+                  </p>
+                  <h3 className="mt-4 text-4xl font-semibold leading-[1.04] sm:text-5xl">
+                    {section.title}
+                  </h3>
+                  <p className="mt-5 max-w-xl text-[16px] leading-8 text-[#4f574f]">
+                    {section.description}
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {section.items.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-md bg-[#eef4ef] px-3 py-2 text-sm font-bold text-[#24564a]"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <Link
+                    href={section.href}
+                    className="mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-[#173f37] px-5 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition hover:bg-[#24564a]"
+                  >
+                    View This Section
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
