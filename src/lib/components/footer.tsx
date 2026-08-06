@@ -112,12 +112,12 @@ export default function Footer() {
       <div className="border-t border-white/10 px-6 py-5 text-center text-xs text-[#aeb8ae]">
         ©2026 M. Petridis Productions ·{" "}
         <Link
-          href="https://voltanyc.org/"
+          href="https://www.novusnyc.org/"
           target="_blank"
           rel="noreferrer"
-          className="font-semibold text-[#d8dfd8] hover:text-[#f7c66b]"
+          className="font-semibold text-[#F6B78D] hover:text-[#F6B78D]"
         >
-          Made with Volta
+          Made by Novus
         </Link>
       </div>
     </footer>
